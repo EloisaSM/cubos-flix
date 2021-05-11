@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  --escuro: #0F1C26;
+  --preto-opaco: rgb(0, 0, 0, 0.9);
+  --roxo: #A785ED;
+  --branco: #ffff;
+  --roxo-claro: #E183C8;
+
+  color: var(--branco);
+  height: 100vh;
+}
+
+.App {
+  display: grid;
+
+  grid-template-areas:
+  "header header"
+  "main aside";
+
+  grid-template-rows: auto ;
+}
+
+.App-header {
+  background-color: var(--escuro);
+
+  
+
+  grid-area: header;
+}
+
+.App-container-cards {
+  background-color: var(--preto-opaco);
+
+  grid-area: main;
+}
+
+.App-aside{
+  background-color: var(--preto-opaco);
+
+  grid-area: aside;
+}
+
