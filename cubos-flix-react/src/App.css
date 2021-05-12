@@ -42,7 +42,7 @@ body {
   grid-template-areas:
   "header header "
   "main aside";
-  grid-template-columns: minmax(min-content, 937px) minmax(min-content, auto);
+  grid-template-columns: minmax(937px, auto) minmax(312px, auto);
   grid-template-rows: min-content;
 }
 
