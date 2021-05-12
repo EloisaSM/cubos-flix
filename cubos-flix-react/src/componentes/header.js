@@ -1,5 +1,4 @@
 import { useState } from "react";
-import movies from "../data";
 import React from "react";
 
 function Header(props) {
