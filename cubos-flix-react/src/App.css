@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Open+Sans&family=Quantico&display=swap');
 
 *{
   margin: 0;
@@ -6,45 +6,270 @@
   box-sizing: border-box;
 }
 
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+input {
+  all: unset;
+}
+
+::placeholder {
+  padding: 1rem;
+}
+
 
 body {
-  --escuro: #0F1C26;
-  --preto-opaco: rgb(0, 0, 0, 0.9);
-  --roxo: #A785ED;
-  --branco: #ffff;
-  --roxo-claro: #E183C8;
+  --dark: #0F1C26;
+  --black-transparent: #1d2226;
+  --black-transparent2: rgba(0,0,0,.2);
+  --purple: #A785ED;
+  --white: #ffff;
+  --light-purple: #E183C8;
 
-  color: var(--branco);
-  height: 100vh;
+  color: var(--white);
+
+  font-family: 'Manrope', sans-serif;
+
 }
 
 .App {
   display: grid;
+  min-height: 100vh;
+  background-color: var(--black-transparent);
 
   grid-template-areas:
-  "header header"
+  "header header "
   "main aside";
-
-  grid-template-rows: auto ;
+  grid-template-columns: minmax(min-content, 937px) minmax(min-content, auto);
+  grid-template-rows: min-content;
 }
 
+/* header */
 .App-header {
-  background-color: var(--escuro);
-
-  
+  background-color: var(--dark);
+  padding: 24px 70px 24px 133px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   grid-area: header;
 }
 
+.input-container, 
+.user {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.input-container .icon {
+  margin-right: 16px;
+}
+
+.input-search{
+  width: 456px;
+}
+
+.input-search input {
+  background-color: var(--black-transparent);
+  width: 100%;
+  height: 50px;
+}
+
+.fav-btn {
+  margin-right: 88px;
+}
+
+.fav-btn img,
+.promo-btn img {
+  margin-right: 5px;
+}
+
+
+.user img {
+  width: 56px;
+  height: 56px;
+}
+
+
+/* container filmes */
 .App-container-cards {
-  background-color: var(--preto-opaco);
+  max-width:937px ;
+  margin: 24px 71px 24px 96px;
+  padding: 24px;
 
   grid-area: main;
 }
 
+.banner-cupom {
+  height: 120px;
+  width: 937px;
+  background: linear-gradient(82.48deg, #FFE4F8 1.63%, #FFFFFF 69.09%);
+  position: relative;
+  color: #0F0915;
+}
+
+.banner-cupom img{
+  width: 227px;
+  position: absolute;
+  top: -55%;
+  right: 10%;
+}
+
+.ticket-content {
+  display: flex;
+  align-items: center;
+  padding: 16px 25px;
+  gap: 47px;
+}
+
+.cupom-container h2 {
+  font-size: 40px;
+}
+
+.content-container h2 {
+  font-size: 24px;
+}
+
+.cupom-container h2,
+.content-container h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Quantico', sans-serif;
+}
+
+
+.counter-container {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.coupom-content,
+.counter  {
+  display: flex;
+  gap: 10px;
+}
+
+.coupom-content p,
+.counter p {
+  align-self: flex-end;
+}
+
+.top-filmes > h2,
+.filmes > h2 {
+  margin-bottom: 16px;
+}
+
+.top-filmes {
+  margin: 42px 0;
+}
+
+.filme-card {
+  /* background-image: url("../public/images/joker.png"); */
+  width: 168px;
+  height: 301px;
+  padding: 8px;
+  background: violet;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.filme-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.filme-card .filme-info >button {
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 7px;
+  background: var(--dark);
+}
+
+.title-filme {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  margin-bottom: 16px;
+}
+
+.filters button {
+  text-align: center;
+  width: 153px;
+  padding: 5px;
+  background: rgba(225,131,200,.2);
+  opacity: .2;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.filters button.selecionado,
+.filters button:hover {
+  opacity: 1;
+  border: 2px solid var(--light-purple);
+  color: var(--light-purple);
+}
+
+
+/* aside */
 .App-aside{
-  background-color: var(--preto-opaco);
+  margin: 49px 0 24px 0px;
+  max-width: 312px;
 
   grid-area: aside;
 }
+
+.cart {
+  position: fixed;
+  width: inherit;
+  background: var(--black-transparent2);
+}
+
+.cart header {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  background: var(--purple);
+}
+
+.cart h3 {
+  align-self: center;
+}
+
+.content-container {
+  display: grid;
+  text-align: center;
+  gap: 19px;
+  padding: 32px 15px 24px;
+}
+
+.content-container input {
+  padding: 8px 16px;
+  width: 87%;
+  background: #0b1217;
+}
+
+.content-container .input p {
+  text-align: start;
+  font-size: 12px;
+}
+
+
+
+
+
 

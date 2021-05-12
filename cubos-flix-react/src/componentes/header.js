@@ -5,25 +5,27 @@ function Header() {
     <header className="App-header">
       <div className="input-container">
         <div className="icon">
-          <img src="/" alt="" />
+          <img src="/logo.svg" alt="" />
         </div>
-        <input type="search" />
+        <div className="input-search">
+          <input type="search" placeholder="Pesquise filmes..." />
+        </div>
       </div>
 
       <div className="btn-container">
-        <button>
-          <img src="" alt="" />
+        <button className="fav-btn">
+          <img src="/bookmark-icon.svg" alt="" />
           Favoritos
         </button>
-        <button>
-          <img src="" alt="" />
+        <button className="promo-btn">
+          <img src="/promotion-icon.svg" alt="" />
           Promoções
         </button>
       </div>
 
       <div className="user">
         <p>Bem vinda Eloisa</p>
-        <img src="" alt="" />
+        <img src="/profile.jpg" alt="" />
       </div>
     </header>
   );

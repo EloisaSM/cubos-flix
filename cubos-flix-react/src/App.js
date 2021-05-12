@@ -1,6 +1,6 @@
 import Header from "./componentes/header";
 import ContainerCards from "./componentes/container";
-import Aside from "./componentes/sacola";
+import Cart from "./componentes/sacola";
 import "./App.css";
 
 function App() {
@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <Header />
       <ContainerCards />
-      <Aside />
+      <aside className="App-aside">
+        <Cart />
+      </aside>
     </div>
   );
 }
