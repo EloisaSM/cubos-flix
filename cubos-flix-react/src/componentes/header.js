@@ -1,6 +1,10 @@
+import { useState } from "react";
+import movies from "../data";
 import React from "react";
 
-function Header() {
+function Header(props) {
+  const { onSearchChange } = props;
+
   return (
     <header className="App-header">
       <div className="input-container">
@@ -8,7 +12,11 @@ function Header() {
           <img src="/logo.svg" alt="" />
         </div>
         <div className="input-search">
-          <input type="search" placeholder="Pesquise filmes..." />
+          <input
+            type="text"
+            placeholder="Pesquise filmes..."
+            onKeyPress={onSearchChange}
+          />
         </div>
       </div>
 
