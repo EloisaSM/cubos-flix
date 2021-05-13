@@ -1,4 +1,3 @@
-import { useState } from "react";
 import React from "react";
 
 function Header(props) {
@@ -8,7 +7,7 @@ function Header(props) {
     <header className="App-header">
       <div className="input-container">
         <div className="icon">
-          <img src="/logo.svg" alt="" />
+          <img src="images/logo.svg" alt="" />
         </div>
         <div className="input-search">
           <input
