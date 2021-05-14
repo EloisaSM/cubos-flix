@@ -188,9 +188,10 @@ body {
 
 }
 
-.favorito-img {
+.favorite-movie-btn{
   width: 24px;
   height: 24px;
+  /* cursor: pointer; */
 }
 
 .filme-info {

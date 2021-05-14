@@ -2,6 +2,9 @@ import React from "react";
 
 function ListMovies(props) {
   const { movies } = props;
+
+  const iconBgFavorited = "--white";
+
   return (
     <div className="filmes-box">
       {movies.map((m, idx) => (
@@ -12,11 +15,9 @@ function ListMovies(props) {
             background: ` linear-gradient(rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%), url(${m.backgroundImg}) center center / cover no-repeat `,
           }}
         >
-          <img
-            className="favorito-img"
-            src="images/star.svg"
-            alt="icone de favorito"
-          />
+          <div className="favorite-movie-btn" onClick={() => {}}>
+            <img src="images/star.svg" alt="" />
+          </div>
           <div className="filme-info">
             <div className="title-ranking">
               <h3>{m.title}</h3>
