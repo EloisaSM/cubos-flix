@@ -1,6 +1,6 @@
 import movies from "../data";
 import TopFilmes from "./topFilms";
-import FilmesAndFiltersBtn from "./filmesAndFiltersBtn";
+import FilmesCategory from "./filmesCategory";
 
 import React from "react";
 
@@ -9,7 +9,7 @@ function ContainerMovies(props) {
   return (
     <>
       <TopFilmes movies={movies} />
-      <FilmesAndFiltersBtn movies={movies} currentMovie={currentMovie} />
+      <FilmesCategory movies={movies} currentMovie={currentMovie} />
     </>
   );
 }
