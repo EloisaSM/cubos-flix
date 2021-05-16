@@ -3,7 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 function BannerCupom() {
-  const durationBannerCupom = 0.4 * 60;
+  const durationBannerCupom = 8 * 60;
 
   const [countdown, setCountdown] = useState(durationBannerCupom);
 
