@@ -10,6 +10,7 @@ function Header(props) {
           <img src="images/logo.svg" alt="" />
         </div>
         <div className="input-search">
+          <img src="images/search-icon.svg" alt="" />
           <input
             type="text"
             placeholder="Pesquise filmes..."
