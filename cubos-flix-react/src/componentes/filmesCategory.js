@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import ListMovies from "./listMovies";
 import SingleMovieSearch from "./singleMovie";
-import SingleMovieFiltered from "./singleMovieFiltered";
 import FilterBtn from "./filtersBtn";
 
 function FilmesCategory(props) {
