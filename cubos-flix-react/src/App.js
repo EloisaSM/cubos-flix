@@ -21,8 +21,6 @@ function App() {
     setCurrentMovie(filmeEncontrado);
   };
 
-  console.log(currentMovie);
-
   return (
     <div className="App">
       <Header onSearchChange={onInputHeaderChange} />
