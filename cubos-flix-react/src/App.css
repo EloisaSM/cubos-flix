@@ -206,7 +206,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
 
+.favorito-img {
+  width: 32px;
+  height: 32px;
 }
 
 .favorite-movie-btn{
@@ -215,9 +219,6 @@ body {
   cursor: pointer;
 }
 
-.favorite-movie-btn svg.selected{
-  fill: var(--white)
-}
 
 .filme-info {
   width: 100%;
